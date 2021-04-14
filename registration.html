@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Registration</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/registration.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+
+    <script>
+        function validateForm()
+        {
+            var uname = document.forms["myform"]["username"];
+            var email = document.forms["myform"]["email"];
+            var password = document.forms["myform"]["password"];
+          
+
+            if (uname.value == "")
+            {
+                window.alert("Please enter your name.");
+                name.focus();
+                return false;
+            }
+
+
+            if (email.value == "")
+            {
+                window.alert("Please enter a valid e-mail address.");
+                email.focus();
+                return false;
+            }
+
+            if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)))
+            {
+                alert("You have entered an invalid email address!")
+                return (false)
+            }
+
+
+            if (password.value == "")
+            {
+                window.alert("Please enter your password");
+                password.focus();
+                return false;
+            }
+            var passw=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+            if(!(password.value.match(passw)))
+            {
+                alert('a password between 6 to 20 characters which contain at least one numeric digit, one uppercase and one lowercase letter');
+                return false;
+            }
+
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container-fluid bg-light">
+        <!-- Use the header area for the website name or logo -->
+        <header id="logo">
+         <a href="index.html">
+         <img src="images/logo.png" alt="logo" id="logo" height="110" width="110">
+         </a>
+         <div class="topic" style="font-size: 16px; color: #f78bbd; font-weight: bold; font-family: 'Open Sans', sans-serif;" >Stay Connected</div>
+        </header>
+     
+         <div class="login_form_wrapper">
+         <div class="container">
+             <div class="row">
+                 <br>
+                 <div class="col-md-8 col-md-offset-2">
+                     <div class="login_wrapper">
+                         <h3 style="text-align: center;">Registration</h3><br>
+                         <form name="myform" action="registration.php" method="post" onsubmit="return validateForm()">
+                         <div class="formsix-pos">
+                             <div class="form-group i-password"> <input type="text" name="username" class="form-control" required="" id="name2" placeholder="User Name..."> </div>
+                         </div>
+                         <div class="formsix-e">
+                             <div class="form-group i-email"> <input type="email" name="email" class="form-control" required="" id="email2" placeholder="Email Address..."> </div>
+                         </div>
+                         <div class="formsix-e">
+                            <div class="form-group i-password"> <input type="password" name="password" class="form-control" required="" id="password2" placeholder="Password..."> </div>
+                        </div>
+                         
+                          <br><button class="button" type="submit">Sign up</button>
+                         
+                         </div>
+                     </div> 
+                 </div>
+             </div>
+         </div>
+     </div>
+
+
+
+<footer class="page-footer font-small blue fixed-bottom bg-primary">
+    <div class="footer-copyright text-center py-3">© 2020 V-loop Video App. All Rights Reserved.
+    </div>
+</footer>
+
+</body>
+</html>

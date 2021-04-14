@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Login</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="container-fluid bg-light">
+   <!-- Use the header area for the website name or logo -->
+   <header id="logo">
+    <a href="index.html">
+    <img src="images/logo.png" alt="logo" id="logo" height="110" width="110">
+    </a>
+    <div class="topic" style="font-size: 16px; color: #f78bbd; font-weight: bold; font-family: 'Open Sans', sans-serif;" >Stay Connected</div>
+   </header>
+
+	<div class="login_form_wrapper">
+    <div class="container">
+        <div class="row">
+            <br>
+            <div class="col-md-8 col-md-offset-2">
+                <div class="login_wrapper">
+                    <h3 style="text-align: center;">Login</h3><br>
+                    <form action="login.php" method="post">
+                    <div class="formsix-pos">
+                        <div class="form-group i-email"> <input type="email" name="email" class="form-control" required="" id="email2" style="font-family: sans-serif" placeholder="Your Email Address..."> </div>
+                    </div>
+                    <div class="formsix-e">
+                        <div class="form-group i-password"> <input type="password" name="pwd" class="form-control" required="" id="password2" style="font-family: sans-serif" placeholder="Your Password..."> </div>
+                    </div>
+                    <div class="login_remember_box"> <label class="control control--checkbox">Remember me <input type="checkbox"> <span class="control__indicator"></span> </label> <a href="#" class="forget_password"> Forgot Password </a> </div>
+                     <button class="btn" type="submit">Login</button>
+                    <br><br><form class="login_message">
+                        <p>Don’t have an account ? <a href="registration.html"> Sign up </a> </p>
+                    </form>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="page-footer font-small blue fixed-bottom bg-primary">
+    <div class="footer-copyright text-center py-3">© 2020 V-loop Video App. All Rights Reserved.
+    </div>
+</footer>
+
+
+</body>
+</html>
